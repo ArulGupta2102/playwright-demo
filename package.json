@@ -1,0 +1,20 @@
+{
+  "name": "playwright-demo",
+  "version": "1.0.0",
+  "description": "This guide will help you get started with using Playwright MCP (Model-Controlled Playwright) to generate high-quality, maintainable test cases for your project. It is designed for users who are new to Playwright MCP and want to automate the creation of robust test suites.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "dotenv": "^17.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.14"
+  }
+}
