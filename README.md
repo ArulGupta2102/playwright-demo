@@ -1,6 +1,6 @@
 # Playwright MCP Test Generation Guide
 
-This guide will help you get started with using Playwright MCP (Model-Controlled Playwright) to generate high-quality, maintainable test cases for your project. It is designed for users who are new to Playwright MCP and want to automate the creation of robust test suites.
+This guide will help you get started with using Playwright MCP (Model-Context Protocol) to generate high-quality, maintainable test cases for your project. It is designed for users who are new to Playwright MCP and want to automate the creation of robust test suites.
 
 ---
 
