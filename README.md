@@ -269,5 +269,7 @@ Alternatively, click open the detailed view of the test and scroll down to the '
 
 
 ## 10. CI/CD Integration
+You may refer to [this](https://playwright.dev/docs/ci-intro) documentation to see CI/CD integration in depth.
 
+### Set up GitHub Actions
 
