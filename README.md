@@ -8,7 +8,7 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 - [Pre-requisites](#Pre-requisites)
 - [Configure Enivironment Variable](#Configure-Environment-Variables)
 - [Configure Playwright testing library](#Configure-Playwright-testing-library)
-- [How to Use Playwright MCP](#How-to-Use-Playwright-MCP)
+- [How to Use Playwright MCP](#2.-How-to-Use-Playwright-MCP)
 - [Expected Output](#Expected-Output)
 - [Important Notes & Best Practices](#Important-Notes-&-Best-Practices)
 - [Running test cases](#running-test-cases)
