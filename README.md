@@ -4,6 +4,29 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 
 ---
 
+## Table of Contents
+- [Pre-requisites](#Pre-requisites)
+- [Configure Enivironment Variable](#Configure-Environment-Variables)
+- [Configure Playwright testing library](#Configure-Playwright-testing-library)
+- [How to Use Playwright MCP](#How-to-Use-Playwright-MCP)
+- [Expected Output](#Expected-Output)
+- [Important Notes & Best Practices](#Important-Notes-&-Best-Practices)
+- [Running test cases](#running-test-cases)
+- [Example Prompt (Copy & Use)s](#Example-Prompt (Copy & Use))
+- [Continuous Integration (CI) Example](#continuous-integration-ci-example)
+- [Troubleshooting](#troubleshooting)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Contact](#contact)
+- [Prompt for Adding a New Feature](#prompt-for-adding-a-new-feature)
+- [Prompt Example for Checkout Feature](#prompt-example-for-checkout-feature)
+- [Debugging Example: Checkout Positive Test Case](#debugging-example-checkout-positive-test-case)
+- [FAQ](#faq)
+- [Example Prompt: Generate Playwright Test Cases for Cart Feature (from HTML)](#example-prompt-generate-playwright-test-cases-for-cart-feature-from-html)
+- [Example Prompt: Generate All Types of Functional Playwright Test Cases for Cart Feature (from HTML)](#example-prompt-generate-all-types-of-functional-playwright-test-cases-for-cart-feature-from-html)
+- [Visual Regression Testing](#visual-regression-testing)
+
+
+---
 ## Pre-requisites
 
 - Node.js v24 or higher
@@ -179,7 +202,7 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 
 ---
 
-## 8. Running the test cases
+## 8. Running test cases
 
 By default tests will be run on all 3 browsers, Chromium, Firefox and WebKit using several workers. This can be configured in the [playwright.config file](playwright.config.ts). Tests are run in headless mode meaning no browser will open up when running the tests. Results of the tests and test logs will be shown in the terminal.
 
