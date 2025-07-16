@@ -294,6 +294,12 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Create .env file from GitHub secrets
+      run: |
+        echo "BASE_URL=${{ secrets.BASE_URL }}" >> .env
+        echo "LOGIN_URL=${{ secrets.LOGIN_URL }}" >> .env
+        echo "VALID_USERNAME=${{ secrets.VALID_USERNAME }}" >> .env
+        echo "VALID_PASSWORD=${{ secrets.VALID_PASSWORD }}" >> .env
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
@@ -311,5 +317,8 @@ The workflow performs these steps:
 - Install Playwright Browsers
 - Run Playwright tests
 - Upload HTML report to the GitHub UI
+
+
+**Note: Before pushing the code, make sure to configure secrets in your GitHub repository, otherwise the GitHub Action will fail.**
 
 Push the workflow file to your repository.
