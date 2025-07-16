@@ -10,11 +10,9 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 
 - Playwright installed (npm install @playwright/test)
 
-- A configured test data factory and shared helpers in the project
+- A configured test data factory and shared helpers in the project(if not, the below prompt will set up a boilerplate code which you can then configure according to your needs).
 
-- Access to Playwright Model Context Protocol (MCP) via CLI or Cursor
-
-- Configured Playwright Model Context Protocol in your IDE(Cursor/Windsurf)(Refer to official documentation of Microsft's Playwright MCP).
+- Configured Playwright Model Context Protocol tools in your IDE(Cursor/Windsurf)(Refer to official documentation of Microsft's Playwright Model Context Protocol).
 
 
 ## Configure Environment Variables
