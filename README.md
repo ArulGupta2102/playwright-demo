@@ -150,7 +150,7 @@ For the **login** feature, valid data for positive test cases typically includes
 
 ---
 
-## Example Prompt (Copy & Use)
+## Example Prompt
 
 ```
 Generate playwright test cases for the "login" feature, covering positive, negative, security, performance, UI/UX, and data-driven scenarios.
