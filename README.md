@@ -12,18 +12,8 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 - [Expected Output](#Expected-Output)
 - [Important Notes & Best Practices](#Important-Notes-&-Best-Practices)
 - [Running test cases](#running-test-cases)
-- [Example Prompt (Copy & Use)s](#Example-Prompt (Copy & Use))
-- [Continuous Integration (CI) Example](#continuous-integration-ci-example)
-- [Troubleshooting](#troubleshooting)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Contact](#contact)
-- [Prompt for Adding a New Feature](#prompt-for-adding-a-new-feature)
-- [Prompt Example for Checkout Feature](#prompt-example-for-checkout-feature)
-- [Debugging Example: Checkout Positive Test Case](#debugging-example-checkout-positive-test-case)
-- [FAQ](#faq)
-- [Example Prompt: Generate Playwright Test Cases for Cart Feature (from HTML)](#example-prompt-generate-playwright-test-cases-for-cart-feature-from-html)
-- [Example Prompt: Generate All Types of Functional Playwright Test Cases for Cart Feature (from HTML)](#example-prompt-generate-all-types-of-functional-playwright-test-cases-for-cart-feature-from-html)
-- [Visual Regression Testing](#visual-regression-testing)
+- [Example Prompt (Copy & Use)](#Example-Prompt (Copy & Use))
+- [CI/CD Integration](#CI/CD-Integration)
 
 
 ---
@@ -112,7 +102,7 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 
 ---
 
-## 3. Expected Output
+## Expected Output
 
 - **Test Files:** Playwright MCP will generate test files in the appropriate subdirectory (e.g., `tests/login/`, `tests/addjob/`).
 - **Test Structure:** Each file will follow the modular structure, using the Page Object Model and shared helpers/factories.
@@ -124,7 +114,7 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 
 **Note: Always go through the code first after the code generation since it might be inconsistent and most likely will throw an error.**
 
-## 4. Important Notes & Best Practices
+## Important Notes & Best Practices
 
 - **Reuse Page Objects:** Always use existing Page Object Models for recurring UI interactions to avoid code duplication.
 - **No Hardcoded Data:** Use shared helpers and test data factories for all test data. Avoid hardcoding values in your tests.
@@ -136,7 +126,7 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 
 ---
 
-## 5. What is Valid Data for Positive Test Cases?
+## What is Valid Data for Positive Test Cases?
 
 Example:
 For the **login** feature, valid data for positive test cases typically includes:
@@ -151,7 +141,7 @@ For the **login** feature, valid data for positive test cases typically includes
 
 > **Note:** For other features, define what constitutes valid data in the context of that feature (e.g., for registration, valid data might be a unique email, strong password, and required profile fields filled).
 
-## 6. What to Watch Out For
+## What to Watch Out For
 
 - **Selector Stability:** Avoid brittle selectors (e.g., based on CSS classes or text that may change).
 - **Test Data Isolation:** Ensure tests do not depend on each other and can run independently.
@@ -160,7 +150,7 @@ For the **login** feature, valid data for positive test cases typically includes
 
 ---
 
-## 7. Example Prompt (Copy & Use)
+## Example Prompt (Copy & Use)
 
 ```
 Generate playwright test cases for the "login" feature, covering positive, negative, security, performance, UI/UX, and data-driven scenarios.
@@ -202,7 +192,7 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 
 ---
 
-## 8. Running test cases
+## Running test cases
 
 By default tests will be run on all 3 browsers, Chromium, Firefox and WebKit using several workers. This can be configured in the [playwright.config file](playwright.config.ts). Tests are run in headless mode meaning no browser will open up when running the tests. Results of the tests and test logs will be shown in the terminal.
 
@@ -253,7 +243,7 @@ If some of the test cases failed, Playwright will automatically spin up a server
 
 ---
 
-## 9. Debugging & Tracing
+## Debugging & Tracing
 
 ### Debug test in UI Mode
 Playwright recommends debugging your tests with UI Mode for a better developer experience where you can easily walk through each step of the test and visually see what was happening before, during and after each step.
@@ -289,7 +279,7 @@ In the HTML report click on the trace icon next to the test name file name to di
 Alternatively, click open the detailed view of the test and scroll down to the 'Traces' tab and open the trace by clicking on the trace screenshot.
 
 
-## 10. CI/CD Integration
+## CI/CD Integration
 You may refer to [this](https://playwright.dev/docs/ci-intro) documentation to see CI/CD integration in depth.
 
 ### Set up GitHub Actions
