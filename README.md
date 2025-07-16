@@ -315,6 +315,7 @@ The workflow performs these steps:
 - Install Node.js
 - Install NPM Dependencies
 - Install Playwright Browsers
+- Create .env file from GitHub secrets
 - Run Playwright tests
 - Upload HTML report to the GitHub UI
 
