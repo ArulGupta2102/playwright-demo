@@ -13,7 +13,8 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 - [Important Notes & Best Practices](#Important-Notes-&-Best-Practices)
 - [Running test cases](#running-test-cases)
 - [Example Prompt (Copy & Use)](#Example-Prompt (Copy & Use))
-- [CI/CD Integration](#CI/CD-Integration)
+- [CI/CD Integration](#cicd-integration)
+- [Debugging & Tracing](#debugging--tracing)
 
 
 ---
