@@ -323,3 +323,13 @@ The workflow performs these steps:
 **Note: Before pushing the code, make sure to configure secrets in your GitHub repository, otherwise the GitHub Action will fail.**
 
 Push the workflow file to your repository.
+
+On pushing the workflow file to your repository, GitHub Actions will run the workflow and execute the steps defined in the workflow file.
+
+It will create a artifact named playwright-report on running the workflow.
+
+Download the report from the GitHub UI, extract it and run the below command.
+
+```Shell
+npx playwright show-report name-of-my-extracted-playwright-report
+```
