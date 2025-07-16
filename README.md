@@ -273,3 +273,43 @@ You may refer to [this](https://playwright.dev/docs/ci-intro) documentation to s
 
 ### Set up GitHub Actions
 
+Below is the [playwright.yml](.github/workflows/playwright.yml) code file for configuring GitHub Actions
+```Shell
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Run Playwright tests
+      run: npx playwright test
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-report
+        path: playwright-report/
+        retention-days: 7
+```
+The workflow performs these steps:
+
+- Clone your repository
+- Install Node.js
+- Install NPM Dependencies
+- Install Playwright Browsers
+- Run Playwright tests
+- Upload HTML report to the GitHub UI
+
+Push the workflow file to your repository.
