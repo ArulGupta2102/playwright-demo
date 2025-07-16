@@ -228,5 +228,27 @@ npx playwright show-report
 
 If some of the test cases failed, Playwright will automatically spin up a server at the same port.
 
+---
 
+## 9. Debugging & Tracing
+
+### Debug test in UI Mode
+Playwright recommends debugging your tests with UI Mode for a better developer experience where you can easily walk through each step of the test and visually see what was happening before, during and after each step.
+
+```Shell
+npx playwright test --ui
+```
+### Debug tests with the Playwright Inspector
+This command will open up a Browser window as well as the Playwright Inspector. You can use the step over button at the top of the inspector to step through your test. Or, press the play button to run your test from start to finish. Once the test has finished, the browser window will close.
+
+```Shell
+npx playwright test example.spec.ts --debug
+```
+
+If you want to start from specific line
+
+```Shell
+npx playwright test example.spec.ts:10 --debug
+```
+### Tracing
 
