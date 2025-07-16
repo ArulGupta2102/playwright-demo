@@ -30,8 +30,10 @@ The easiest way to get started with Playwright Test is to run the init command.
 # Run from your project's root directory
 npm init playwright@latest
 ```
-This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.ts. You can now jump directly to writing assertions section. 
-Make sure to name the subdirectory to test instead of e2e
+On running the above command, it will ask you for few confirmations.
+This will create a configuration file, optionally add examples, a GitHub Action workflow(if true) and a first test example.spec.ts. You can now jump directly to writing assertions section. 
+Make sure to name the subdirectory to test instead of e2e while configuring after running the above command.
+If you want to add CI/CD workflow, give the value of create Github Action true while configuring
 
 Add dependency and install browsers.
 
@@ -251,4 +253,21 @@ If you want to start from specific line
 npx playwright test example.spec.ts:10 --debug
 ```
 ### Tracing
+
+Traces are normally run in a Continuous Integration(CI) environment, because locally you can use UI Mode for developing and debugging tests. However, if you want to run traces locally without using UI Mode, you can force tracing to be on with --trace on.
+```Shell
+npx playwright test --trace on
+```
+
+Then Open the report
+```Shell
+npx playwright show-report
+```
+In the HTML report click on the trace icon next to the test name file name to directly open the trace for the required test.
+
+Alternatively, click open the detailed view of the test and scroll down to the 'Traces' tab and open the trace by clicking on the trace screenshot.
+
+
+## 10. CI/CD Integration
+
 
