@@ -8,7 +8,7 @@ This guide will help you get started with using Playwright MCP (Model-Context Pr
 - [Pre-requisites](#Pre-requisites)
 - [Configure Enivironment Variable](#Configure-Environment-Variables)
 - [Configure Playwright testing library](#Configure-Playwright-testing-library)
-- [How to Use Playwright MCP](#2.-How-to-Use-Playwright-MCP)
+- [How to Use Playwright MCP](#How-to-Use-Playwright-MCP)
 - [Expected Output](#Expected-Output)
 - [Important Notes & Best Practices](#Important-Notes-&-Best-Practices)
 - [Running test cases](#running-test-cases)
@@ -64,7 +64,7 @@ npm i -D @playwright/test
 npx playwright install
 ```
 
-## 2. How to Use Playwright MCP
+## How to Use Playwright MCP
 
 ### **Step 1: Prepare Your Prompt**
 Use the following template prompt to instruct Playwright MCP to generate test cases for a specific feature. Replace `{target}` with your target feature as needed, and add more steps that are required to generate tests for the feature.
