@@ -4,11 +4,42 @@ This guide will help you get started with using Playwright MCP (Model-Controlled
 
 ---
 
-## 1. What is Playwright MCP?
+## Pre-requisites
 
-Playwright MCP is an AI-powered tool that generates Playwright test cases based on natural language prompts. It follows best practices such as the Page Object Model (POM), modular test structure, and uses resilient selectors for stable and accessible tests.
+- Node.js v24 or higher
 
----
+- Playwright installed (npm install @playwright/test)
+
+- A configured test data factory and shared helpers in the project
+
+- Access to Playwright Model Context Protocol (MCP) via CLI or Cursor
+
+- Configured Playwright Model Context Protocol in your IDE(Cursor/Windsurf)(Refer to official documentation of Microsft's Playwright MCP).
+
+
+## Configure Environment Variables
+
+Configuring the .env file is crucial for running test cases. Here is the attached [sample.env](sample.env) which includes the key variables to be added.
+
+## Configure Playwright testing library
+
+After installing, we need to configure the playwright environment in the local repository. Here are the steps:
+The easiest way to get started with Playwright Test is to run the init command.
+
+```Shell
+# Run from your project's root directory
+npm init playwright@latest
+```
+This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.ts. You can now jump directly to writing assertions section. 
+Make sure to name the subdirectory to test instead of e2e
+
+Add dependency and install browsers.
+
+```Shell
+npm i -D @playwright/test
+# install supported browsers
+npx playwright install
+```
 
 ## 2. How to Use Playwright MCP
 
@@ -67,6 +98,8 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 - **Selectors:** Resilient selectors (getByRole, getByLabel, getByTestId) will be used for stability and accessibility.
 
 ---
+
+**Note: Always go through the code first after the code generation since it might be inconsistent and most likely will throw an error.**
 
 ## 4. Important Notes & Best Practices
 
@@ -143,3 +176,57 @@ Try to avoid external libraries as much as possible. Use methods known to playwr
 - Strictly import .env file in test files and not any other files.
 
 ```
+
+---
+
+## 8. Running the test cases
+
+By default tests will be run on all 3 browsers, Chromium, Firefox and WebKit using several workers. This can be configured in the playwright.config file. Tests are run in headless mode meaning no browser will open up when running the tests. Results of the tests and test logs will be shown in the terminal.
+
+```Shell
+#runs all the .ts test scripts created
+npx playwright test
+```
+
+To visually see how Playwright interacts with the website run the below command:
+
+```Shell
+npx playwright test --headed
+```
+
+### Run specific test cases
+
+To run a single test file, pass in the name of the test file that you want to run.
+
+```Shell
+npx playwright test yourtest.spec.ts
+```
+To run a set of test files from different directories, pass in the names of the directories that you want to run the tests in.
+
+```Shell
+npx playwright test tests/todo-page/ tests/landing-page/
+```
+To run files that have ```landing``` or ```login``` in the file name, simply pass in these keywords to the CLI.
+
+```Shell
+npx playwright test landing login
+```
+To run a test with a specific title, use the -g flag followed by the title of the test.
+
+```Shell
+npx playwright test -g "add a todo item"
+```
+
+### Generate Report
+
+If all the test cases are passed, run the below command to generate report of the test cases.
+
+```Shell
+# runs a server at localhost:9323 which shows detailed report.
+npx playwright show-report
+```
+
+If some of the test cases failed, Playwright will automatically spin up a server at the same port.
+
+
+
